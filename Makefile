@@ -6,7 +6,7 @@
 #    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/08 15:02:28 by nalexand          #+#    #+#              #
-#    Updated: 2019/04/11 17:59:11 by nalexand         ###   ########.fr        #
+#    Updated: 2019/04/17 09:23:10 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SOURCES =	ft_atoi.c \
 			ft_lstadd.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
+			ft_lstclear.c \
 			ft_numlen.c \
 			ft_strclen.c \
 			ft_wrdcount.c \

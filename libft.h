@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 01:55:55 by nalexand          #+#    #+#             */
-/*   Updated: 2019/04/11 19:30:07 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/04/17 13:38:57 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,6 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
-
-typedef struct			s_iterators
-{
-	int					in;
-	char				*str;
-	int					work;
-	char				*chr;
-}						t_iter;
 
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
@@ -91,6 +83,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstclear(void *content, size_t size);
 
 int					ft_numlen(int n);
 size_t				ft_strclen(char const *s, char const c);
