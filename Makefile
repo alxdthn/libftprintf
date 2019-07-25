@@ -6,7 +6,7 @@
 #    By: mihail <mihail@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/25 02:59:45 by mihail           ###   ########.fr        #
+#    Updated: 2019/07/25 03:06:02 by mihail           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -133,11 +133,12 @@ PF_OBJ = $(addprefix $(OBJ_DIR), $(patsubst %.c, %.o, $(PF_SRC)))
 
 all: $(FT_PRINTF)
 
-$(FT_PRINTF): $(LIBFT) $(PF_OBJ)
+$(FT_PRINTF): $(LFT_OBJ) $(PF_OBJ)
 	@ar rc $@ $^
 	ranlib $@
 $(LIBFT): $(LFT_OBJ)
 	@ar rc $@ $^
+	ranlib $@
 
 $(OBJ_DIR)%.o: $(SRC_DIR)$(LFT_DIR)%.c
 	@mkdir -p $(OBJ_DIR)

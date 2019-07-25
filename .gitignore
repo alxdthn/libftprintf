@@ -1,3 +1,5 @@
 .DS_Store
 obj
 *.a
+main.c
+a.out
