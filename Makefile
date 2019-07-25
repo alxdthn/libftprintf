@@ -6,7 +6,7 @@
 #    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/25 15:04:38 by nalexand         ###   ########.fr        #
+#    Updated: 2019/07/25 16:11:15 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ FT_PRINTF = libftprintf.a
 LIBFT = libft.a
 C_FLAGS = -g -Wall -Werror -Wextra
 HEADER = -I includes
+PF_HEAD = ./includes/ft_printf.h
+LFT_HEAD = ./includes/libft.h
 
 SRC_DIR = src/
 OBJ_DIR = obj/
@@ -140,10 +142,10 @@ $(LIBFT): $(LFT_OBJ)
 	@ar rc $@ $^
 	ranlib $@
 
-$(OBJ_DIR)%.o: $(SRC_DIR)$(LFT_DIR)%.c
+$(OBJ_DIR)%.o: $(SRC_DIR)$(LFT_DIR)%.c $(LFT_HEAD)
 	@mkdir -p $(OBJ_DIR)
 	gcc $(C_FLAGS) -c $< -o $@ $(HEADER)
-$(OBJ_DIR)%.o: $(SRC_DIR)$(PF_DIR)%.c
+$(OBJ_DIR)%.o: $(SRC_DIR)$(PF_DIR)%.c $(PF_HEAD)
 	@mkdir -p $(OBJ_DIR)
 	gcc $(C_FLAGS) -c $< -o $@ $(HEADER)
 
