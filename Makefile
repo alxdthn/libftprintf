@@ -6,7 +6,7 @@
 #    By: mihail <mihail@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/25 02:44:46 by mihail           ###   ########.fr        #
+#    Updated: 2019/07/25 02:59:45 by mihail           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -135,6 +135,7 @@ all: $(FT_PRINTF)
 
 $(FT_PRINTF): $(LIBFT) $(PF_OBJ)
 	@ar rc $@ $^
+	ranlib $@
 $(LIBFT): $(LFT_OBJ)
 	@ar rc $@ $^
 
