@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pf_get_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mihail <mihail@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 22:38:38 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/23 17:30:54 by mihail           ###   ########.fr       */
+/*   Updated: 2019/07/25 14:55:07 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void		get_size(char **fmt, t_size *size)
 	else if (**fmt == 'L')
 		set_params_size(&tmp_size, fmt, 'f', sizeof(long double));
 	else if (**fmt == 'j')
-		set_params_size(&tmp_size, fmt, 'j', sizeof(__intmax_t));
+		set_params_size(&tmp_size, fmt, 'j', sizeof(long long));
 	else if (**fmt == 'z')
 		set_params_size(&tmp_size, fmt, 'z', sizeof(size_t));
 	if (size->chr)

@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 02:15:34 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/25 15:30:32 by nalexand         ###   ########.fr       */
+/*   Created: 2019/07/25 14:57:11 by nalexand          #+#    #+#             */
+/*   Updated: 2019/07/25 15:27:05 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "ft_printf.h"
+# define MEM 100000000
 
-void	ft_bzero(void *s, size_t n)
+int		main(void)
 {
-	unsigned long	set;
-	size_t			i;
+	char 	*str;
+	size_t	i;
 
-	i = 0;
-	set = 0;
-	while (i < n / 8)
-		((unsigned long *)s)[i++] = set;
-	i *= 8;
-	while (i < n)
-		((unsigned char *)s)[i++] = '\0';
+	str = (char *)malloc(MEM);
+	//ft_memset(str, 255, MEM);
+	//i = 0;
+	//while (i < MEM)
+	//	ft_printf("%#hhb ", str[i++]);
+	//ft_printf("\n");
+	ft_bzero(str, MEM);
+	//i = 0;
+	//while (i < MEM)
+	//	ft_printf("%#hhb ", str[i++]);
+	//ft_printf("\n");
+	free(str);
 }

@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mihail <mihail@student.42.fr>              +#+  +:+       +#+         #
+#    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/25 03:06:02 by mihail           ###   ########.fr        #
+#    Updated: 2019/07/25 15:04:38 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FT_PRINTF = libftprintf.a
 LIBFT = libft.a
-C_FLAGS = -Wall -Werror -Wextra
+C_FLAGS = -g -Wall -Werror -Wextra
 HEADER = -I includes
 
 SRC_DIR = src/
