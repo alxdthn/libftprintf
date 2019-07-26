@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 01:55:55 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/21 19:17:48 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/26 18:34:08 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strccount(char *str, char c);
 void				*ft_memset(void *str, int c, size_t len);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);

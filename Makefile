@@ -6,7 +6,7 @@
 #    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/25 16:11:15 by nalexand         ###   ########.fr        #
+#    Updated: 2019/07/26 23:48:28 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ LFT_SRC =	ft_arraydel.c \
 			ft_strsskp.c \
 			ft_strstr.c \
 			ft_strsub.c \
+			ft_strccount.c \
 			ft_strtrim.c \
 			ft_swap.c \
 			ft_tolower.c \
