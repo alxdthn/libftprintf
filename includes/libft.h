@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 01:55:55 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/26 18:34:08 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/27 23:58:16 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstclear(void *content, size_t size);
 void				ft_lstpushback(t_list **alst, t_list *lst);
+size_t				ft_lstcount(t_list *lst);
 
 int					ft_intlen(int n);
 size_t				ft_strclen(char const *s, char const c);

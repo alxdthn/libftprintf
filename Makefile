@@ -6,7 +6,7 @@
 #    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/26 23:48:28 by nalexand         ###   ########.fr        #
+#    Updated: 2019/07/27 23:58:27 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,7 @@ LFT_SRC =	ft_arraydel.c \
 			ft_atoi_base.c \
 			ft_power.c \
 			ft_check_file_format.c \
+			ft_lstcount.c \
 			get_next_line.c
 
 PF_SRC =	ft_printf.c \
