@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 01:55:55 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/27 23:58:16 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/29 02:11:28 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <string.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# define CONT (*elem)->content
-# define SIZE (*elem)->content_size
-# define BUFF_SIZE 7
 
 typedef struct		s_list
 {
@@ -27,7 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					get_next_line(int fd, char **line);
+ssize_t				get_next_line(int fd, char **line);
 void				*ft_emalloc(size_t size);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);

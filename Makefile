@@ -6,7 +6,7 @@
 #    By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:58:18 by nalexand          #+#    #+#              #
-#    Updated: 2019/07/27 23:58:27 by nalexand         ###   ########.fr        #
+#    Updated: 2019/07/29 02:19:34 by nalexand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC_DIR = src/
 OBJ_DIR = obj/
 PF_DIR = ft_printf/
 LFT_DIR = libft/
+GNL_DIR = gnl/
 
 LFT_SRC =	ft_arraydel.c \
 			ft_satoi.c \
@@ -106,7 +107,10 @@ LFT_SRC =	ft_arraydel.c \
 			ft_power.c \
 			ft_check_file_format.c \
 			ft_lstcount.c \
-			get_next_line.c
+
+GNL_SRC =	get_next_line.c \
+			clear_fd_node.c \
+			write_func.c
 
 PF_SRC =	ft_printf.c \
 			pf_ltoa_base.c \
@@ -134,20 +138,24 @@ PF_SRC =	ft_printf.c \
 
 LFT_OBJ = $(addprefix $(OBJ_DIR), $(patsubst %.c, %.o, $(LFT_SRC)))
 PF_OBJ = $(addprefix $(OBJ_DIR), $(patsubst %.c, %.o, $(PF_SRC)))
+GNL_OBJ = $(addprefix $(OBJ_DIR), $(patsubst %.c, %.o, $(GNL_SRC)))
 
 all: $(FT_PRINTF)
 
-$(FT_PRINTF): $(LFT_OBJ) $(PF_OBJ)
+$(FT_PRINTF): $(LFT_OBJ) $(PF_OBJ) $(GNL_OBJ)
 	@ar rc $@ $^
 	ranlib $@
-$(LIBFT): $(LFT_OBJ)
+$(LIBFT): $(LFT_OBJ) $(GNL_OBJ)
 	@ar rc $@ $^
 	ranlib $@
 
-$(OBJ_DIR)%.o: $(SRC_DIR)$(LFT_DIR)%.c $(LFT_HEAD)
+$(OBJ_DIR)%.o: $(SRC_DIR)$(LFT_DIR)%.c $(LFT_HEAD) $(GNL_HEAD)
 	@mkdir -p $(OBJ_DIR)
 	gcc $(C_FLAGS) -c $< -o $@ $(HEADER)
-$(OBJ_DIR)%.o: $(SRC_DIR)$(PF_DIR)%.c $(PF_HEAD)
+$(OBJ_DIR)%.o: $(SRC_DIR)$(PF_DIR)%.c $(PF_HEAD) $(LFT_HEAD) $(GNL_HEAD)
+	@mkdir -p $(OBJ_DIR)
+	gcc $(C_FLAGS) -c $< -o $@ $(HEADER)
+$(OBJ_DIR)%.o: $(SRC_DIR)$(GNL_DIR)%.c $(GNL_HEAD) $(LFT_HEAD)
 	@mkdir -p $(OBJ_DIR)
 	gcc $(C_FLAGS) -c $< -o $@ $(HEADER)
 

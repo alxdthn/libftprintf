@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 18:16:18 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/28 03:50:58 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/29 02:23:29 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	size_t	 i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] || s2[i])

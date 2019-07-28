@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 22:38:38 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/25 14:55:07 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/29 02:21:23 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void		get_width(char **fmt, t_ftask *ftask, va_list *args)
 
 	if (**fmt == '*')
 	{
-		if ((tmp = va_arg(*args, int)) < __INT32_MAX__ && tmp > -2147483648 + 1L)
+		if ((tmp = va_arg(*args, int)) < INT32_MAX && tmp > INT32_MIN + 1L)
 		{
 			if (tmp < 0)
 			{
@@ -64,7 +64,7 @@ void		get_prc(char **fmt, int *prc, va_list *args)
 		(*fmt)++;
 	if (**fmt == '*')
 	{
-		if ((tmp = va_arg(*args, int)) < __INT32_MAX__ && tmp > -2147483648 + 1L)
+		if ((tmp = va_arg(*args, int)) < INT32_MAX && tmp > INT32_MIN + 1L)
 			*prc = tmp;
 		else
 			*prc = 0;
