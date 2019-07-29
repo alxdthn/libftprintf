@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/27 23:55:30 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/27 23:57:25 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/29 03:28:27 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ size_t	ft_lstcount(t_list *lst)
 		++i;
 		lst = lst->next;
 	}
-	return (0);
+	return (i);
 }
