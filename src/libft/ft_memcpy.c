@@ -6,7 +6,7 @@
 /*   By: nalexand <nalexand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 21:39:38 by nalexand          #+#    #+#             */
-/*   Updated: 2019/07/29 02:26:30 by nalexand         ###   ########.fr       */
+/*   Updated: 2019/07/29 03:20:52 by nalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned long	set;
-	size_t			i;
-
-	i = 0;
-	set = 0;
-	while (i < n / 8)
-		((unsigned long *)s)[i++] = set;
-	i *= 8;
-	while (i < n)
-		((unsigned char *)s)[i++] = '\0';
 }
